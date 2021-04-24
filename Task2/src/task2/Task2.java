@@ -26,7 +26,7 @@ public class Task2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Enter a string");
+        System.out.println("Enter a string:");
         Scanner obj = new Scanner(System.in);
         String string = obj.nextLine();
         
