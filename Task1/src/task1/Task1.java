@@ -39,16 +39,32 @@ public class Task1 {
           
           return count;
       }
+      static int puncCount (String string)
+      {
+          int count = 0;
+          for (int i = 0; i < string.length(); i++)
+          {
+              char ch = string.charAt(i);
+              if (ch == '.' || ch == ',' || ch == ':' || ch == ';' || ch == '/'
+                      || ch == '/' || ch == '!' || ch == '"' )
+              {
+                  count++;
+              }
+          }
+          return count;
+      }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int totalWord;
+        
         System.out.println("Enter a sentence:");
         Scanner obj = new Scanner(System.in);
         String string = obj.nextLine();
         
+        
+        int totalWord;
         totalWord = wordCounter(string);
         System.out.println("No of words in the given sentence are: " + totalWord);
         
@@ -57,6 +73,10 @@ public class Task1 {
         totalVowels = vowelCounter (string);
         System.out.println("No of vowels in the given sentence are: " + totalVowels);
         
+        
+        int totalPuncMark;
+        totalPuncMark = puncCount (string);
+        System.out.println("No of punctuation marks in tne string are: " + totalPuncMark);
     }
     
 }
