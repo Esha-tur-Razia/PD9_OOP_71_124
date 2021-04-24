@@ -17,7 +17,11 @@ public class Task3 {
         string = string.replaceAll("\\s+", " ");
         return string;
     }
-    
+    static String removeInteger(String str)
+    {
+        str = str.replaceAll("[0,1,2,3,4,5,6,7,8,9]", "");
+        return str;
+    }
     /**
      * @param args the command line arguments
      */
@@ -27,10 +31,16 @@ public class Task3 {
         Scanner obj = new Scanner(System.in);
         String string = obj.nextLine();
         
-        String str;
-        str = ridMultipleBlanks(string);
-        System.out.print(str);
+        String ridSpace;
+        ridSpace = ridMultipleBlanks(string);
+        System.out.println(ridSpace);
         
+        System.out.println("Enter a string:");
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();        
+        String removeInt;
+        removeInt = removeInteger(str);
+        System.out.println(removeInt);
     }
     
 }
