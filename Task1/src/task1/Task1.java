@@ -53,9 +53,21 @@ public class Task1 {
           }
           return count;
       }
+      static boolean findSubString(String string,String sub)
+      {
+          boolean flag = true;
+          sub = "the";
+          for (int i = 0; i < string.length(); i++)
+          {
+             if(string.equals(sub))
+                 flag = false;
+          }
+          return flag;
+      }
     /**
      * @param args the command line arguments
      */
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -77,6 +89,19 @@ public class Task1 {
         int totalPuncMark;
         totalPuncMark = puncCount (string);
         System.out.println("No of punctuation marks in tne string are: " + totalPuncMark);
+        
+        boolean ans;
+        String sub = null;
+        ans = findSubString(string,sub);
+        if (ans == true)
+        {
+            System.out.println("the is the part of the string ");
+        }
+        else
+        {
+            System.out.println("the is not a part of the string");
+        }
+        
     }
     
 }
