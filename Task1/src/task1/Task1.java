@@ -95,11 +95,11 @@ public class Task1 {
         ans = findSubString(string,sub);
         if (ans == true)
         {
-            System.out.println("the is the part of the string ");
+            System.out.println("The is the part of the string ");
         }
         else
         {
-            System.out.println("the is not a part of the string");
+            System.out.println("The is not a part of the string");
         }
         
     }
